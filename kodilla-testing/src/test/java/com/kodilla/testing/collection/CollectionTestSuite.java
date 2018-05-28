@@ -1,11 +1,14 @@
 package com.kodilla.testing.collection;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 import org.junit.*;
 
 import com.kodilla.testing.collection.OddNumbersExterminator;
 
 public class CollectionTestSuite {
+    ArrayList<Integer> myList = new ArrayList<Integer>();
 
     @Before
     public void before(){
@@ -30,34 +33,46 @@ public class CollectionTestSuite {
     public void testOddNumbersExterminatorEmptyList(){
         //Given
         OddNumbersExterminator testing = new OddNumbersExterminator();
-
+        List<Integer> myList = new ArrayList<Integer>();
+        List<Integer> onlyEven = new ArrayList<Integer>();
+git a
         //When
-        testing.exterminate(testing.myList, testing.onlyEven);
-        System.out.println("Full list " + testing.myList );
-        System.out.println("Only even list" + testing.onlyEven);
+        testing.exterminate(myList);
+        System.out.println(myList);
+        System.out.println(onlyEven);
 
         //Then
 
-        Assert.assertEquals(testing.myList, testing.onlyEven);
+        Assert.assertEquals(myList, onlyEven);
     }
 
     @Test
     public void testOddNumbersExterminatorNormalList(){
         //Given
         OddNumbersExterminator testing = new OddNumbersExterminator();
-        testing.addNumbers();
+        List<Integer> myList = new ArrayList<>();
+
+        for (int i=0; i<10; i++) {
+            myList.add(i + 1);
+        }
+
+        List<Integer> result = testing.exterminate(myList);
+
         //When
-        testing.exterminate(testing.myList, testing.onlyEven);
-        System.out.println("Full list :" + testing.myList);
-        System.out.println("Only even list :" + testing.onlyEven);
+        testing.exterminate( myList );
+        System.out.println("Full list :" + myList);
+        System.out.println("Only even list :" + result);
+
         //Then
-        ArrayList<Integer> expectedArray = new ArrayList<Integer>();
+        List<Integer> expectedArray = new ArrayList<Integer>();
         expectedArray.add(2);
         expectedArray.add(4);
         expectedArray.add(6);
         expectedArray.add(8);
         expectedArray.add(10);
-        Assert.assertEquals(expectedArray, testing.onlyEven);
+        Assert.assertEquals(expectedArray, result);
+
+
     }
 
 }

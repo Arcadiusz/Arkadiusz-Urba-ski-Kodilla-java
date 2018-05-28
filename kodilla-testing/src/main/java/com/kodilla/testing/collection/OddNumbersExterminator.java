@@ -1,11 +1,12 @@
 package com.kodilla.testing.collection;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class OddNumbersExterminator {
 
-    ArrayList<Integer> myList;
+   /* ArrayList<Integer> myList;
     ArrayList<Integer> onlyEven;
 
     public  OddNumbersExterminator() {
@@ -19,18 +20,17 @@ public class OddNumbersExterminator {
             myList.add(i+1);
             }
     }
+    */
 
 
-    public ArrayList exterminate(ArrayList<Integer> theList, ArrayList<Integer> anotherList) {
-        int temporaryValue = 0;
-        for (int n=0; n<theList.size(); n++){
-            temporaryValue = theList.get(n);
-
-            if (temporaryValue % 2 == 0){
-                anotherList.add(temporaryValue);
+    public List<Integer> exterminate(List<Integer> theList) {
+        List<Integer> result = new ArrayList<Integer>();
+        for (int n: theList) {
+            if ( n % 2 == 0 ){
+                result.add(n);
             }
         }
-        return anotherList;
+        return result;
     }
 }
 

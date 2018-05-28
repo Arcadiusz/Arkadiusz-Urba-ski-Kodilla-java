@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.collection.CollectionTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-05-27T06:40:57" hostname="LAPTOP-PG4L8KD3" time="0.004">
+  <properties/>
+  <testcase name="testOddNumbersExterminatorEmptyList" classname="com.kodilla.testing.collection.CollectionTestSuite" time="0.004"/>
+  <system-out><![CDATA[Test Suite: begin
+Test Case: begin
+[]
+[]
+Test Case: end
+Test Suite: end
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
