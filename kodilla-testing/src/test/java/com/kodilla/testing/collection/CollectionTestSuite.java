@@ -60,8 +60,8 @@ public class CollectionTestSuite {
 
         //When
         testing.exterminate( myList );
-        System.out.println("Full list :" + myList);
-        System.out.println("Only even list :" + result);
+        System.out.println("Full list : " + myList);
+        System.out.println("Only even list : " + result);
 
         //Then
         List<Integer> expectedArray = new ArrayList<Integer>();

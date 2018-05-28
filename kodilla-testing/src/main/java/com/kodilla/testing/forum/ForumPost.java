@@ -24,7 +24,9 @@ public class ForumPost {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         ForumPost forumPost = (ForumPost) o;
+
         return Objects.equals(postBody, forumPost.postBody) &&
                 Objects.equals(author, forumPost.author);
     }
