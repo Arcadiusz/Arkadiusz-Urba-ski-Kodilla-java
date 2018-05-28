@@ -46,7 +46,7 @@ public class CollectionTestSuite {
         Assert.assertEquals(myList, onlyEven);
     }
 
-    @Test
+    @Testg
     public void testOddNumbersExterminatorNormalList(){
         //Given
         OddNumbersExterminator testing = new OddNumbersExterminator();
@@ -56,9 +56,8 @@ public class CollectionTestSuite {
             myList.add(i + 1);
         }
 
-        List<Integer> result = testing.exterminate(myList);
-
         //When
+        List<Integer> result = testing.exterminate(myList);
         testing.exterminate( myList );
         System.out.println("Full list : " + myList);
         System.out.println("Only even list : " + result);
@@ -71,8 +70,5 @@ public class CollectionTestSuite {
         expectedArray.add(8);
         expectedArray.add(10);
         Assert.assertEquals(expectedArray, result);
-
-
     }
-
 }

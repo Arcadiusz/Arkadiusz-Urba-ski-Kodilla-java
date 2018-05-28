@@ -27,13 +27,14 @@ public class ForumPost {
 
         ForumPost forumPost = (ForumPost) o;
 
-        return Objects.equals(postBody, forumPost.postBody) &&
-                Objects.equals(author, forumPost.author);
+        if (!postBody.equals(forumPost.postBody)) return false;
+        return author.equals(forumPost.author);
     }
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(postBody, author);
+        int result = postBody.hashCode();
+        result = 31 * result + author.hashCode();
+        return result;
     }
 }
