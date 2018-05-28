@@ -46,7 +46,7 @@ public class CollectionTestSuite {
         Assert.assertEquals(myList, onlyEven);
     }
 
-    @Testg
+    @Test
     public void testOddNumbersExterminatorNormalList(){
         //Given
         OddNumbersExterminator testing = new OddNumbersExterminator();
