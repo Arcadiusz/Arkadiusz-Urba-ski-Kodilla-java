@@ -35,7 +35,7 @@ public class CollectionTestSuite {
         OddNumbersExterminator testing = new OddNumbersExterminator();
         List<Integer> myList = new ArrayList<Integer>();
         List<Integer> onlyEven = new ArrayList<Integer>();
-git a
+
         //When
         testing.exterminate(myList);
         System.out.println(myList);
