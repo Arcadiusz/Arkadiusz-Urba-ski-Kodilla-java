@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.shape.ShapeCollectorTestSuite" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-05-29T15:48:45" hostname="LAPTOP-PG4L8KD3" time="0.014">
+  <properties/>
+  <testcase name="testShowFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.01"/>
+  <testcase name="testRemoveFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
+  <testcase name="testAddFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
+  <testcase name="testGetFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
+  <system-out><![CDATA[Testing starts here
+Preparing to execute test #1
+Test # 1 ended 
+Preparing to execute test #2
+Test # 2 ended 
+Preparing to execute test #3
+Test # 3 ended 
+Preparing to execute test #4
+Test # 4 ended 
+Testing ended
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

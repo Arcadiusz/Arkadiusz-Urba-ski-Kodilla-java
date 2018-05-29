@@ -16,11 +16,7 @@ public class ShapeCollector {
     }
 
     public void removeFigure(Shape shape){
-        if(shapes.size() != 0) {
-            shapes.remove(shape);
-        } else {
-            System.out.println("List was empty!");
-        }
+        shapes.remove(shape);
     }
 
     public Shape getFigure(int n){
