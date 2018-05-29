@@ -32,6 +32,7 @@ public class ForumUser {
     }
 
     public int getCommentsQuantity(){
+
         return comments.size();
     }
 
