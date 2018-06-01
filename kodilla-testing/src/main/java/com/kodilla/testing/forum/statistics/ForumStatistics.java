@@ -3,12 +3,12 @@ package com.kodilla.testing.forum.statistics;
 public class ForumStatistics {
     Statistics statistics;
 
-    int usersQuantity;
-    int postsQuantity;
-    int commentsQuantity;
-    double avgPostPerUser;
-    double avgCommentsPerUser;
-    double avgCommentsToPost;
+    private int usersQuantity;
+    private int postsQuantity;
+    private int commentsQuantity;
+    private double avgPostPerUser;
+    private double avgCommentsPerUser;
+    private double avgCommentsToPost;
 
     public ForumStatistics(Statistics statistics) {
         this.statistics = statistics;
