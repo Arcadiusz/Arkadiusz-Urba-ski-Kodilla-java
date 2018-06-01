@@ -48,14 +48,16 @@ public class ForumStatisticsTestSuite {
         ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
 
         //When
-        double AvgPostsPerUser = forumStatistics.getAvgPostPerUser();
-        double AvgCommentsPerUser = forumStatistics.getAvgCommentsPerUser();
-        double AvgCommentsToPost = forumStatistics.getAvgCommentsToPost();
+        forumStatistics.calculateAdvStatistics(statisticsMock);
+
+        double avgPostsPerUser = forumStatistics.getAvgPostPerUser();
+        double avgCommentsPerUser = forumStatistics.getAvgCommentsPerUser();
+        double avgCommentsToPost = forumStatistics.getAvgCommentsToPost();
 
         ArrayList<Double> list = new ArrayList<>();
-        list.add(AvgPostsPerUser);
-        list.add(AvgCommentsPerUser);
-        list.add(AvgCommentsToPost);
+        list.add(avgPostsPerUser);
+        list.add(avgCommentsPerUser);
+        list.add(avgCommentsToPost);
 
         //Then
         ArrayList<Double> expectedResult = new ArrayList<>();
@@ -85,14 +87,16 @@ public class ForumStatisticsTestSuite {
         ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
 
         //When
-        double AvgPostsPerUser = forumStatistics.getAvgPostPerUser();
-        double AvgCommentsPerUser = forumStatistics.getAvgCommentsPerUser();
-        double AvgCommentsToPost = forumStatistics.getAvgCommentsToPost();
+        forumStatistics.calculateAdvStatistics(statisticsMock);
+
+        double avgPostsPerUser = forumStatistics.getAvgPostPerUser();
+        double avgCommentsPerUser = forumStatistics.getAvgCommentsPerUser();
+        double avgCommentsToPost = forumStatistics.getAvgCommentsToPost();
 
         ArrayList<Double> list = new ArrayList<>();
-        list.add(AvgPostsPerUser);
-        list.add(AvgCommentsPerUser);
-        list.add(AvgCommentsToPost);
+        list.add(avgPostsPerUser);
+        list.add(avgCommentsPerUser);
+        list.add(avgCommentsToPost);
 
         //Then
         ArrayList<Double> expectedResult = new ArrayList<>();
@@ -122,14 +126,16 @@ public class ForumStatisticsTestSuite {
         ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
 
         //When
-        double AvgPostsPerUser = forumStatistics.getAvgPostPerUser();
-        double AvgCommentsPerUser = forumStatistics.getAvgCommentsPerUser();
-        double AvgCommentsToPost = forumStatistics.getAvgCommentsToPost();
+        forumStatistics.calculateAdvStatistics(statisticsMock);
+
+        double avgPostsPerUser = forumStatistics.getAvgPostPerUser();
+        double avgCommentsPerUser = forumStatistics.getAvgCommentsPerUser();
+        double avgCommentsToPost = forumStatistics.getAvgCommentsToPost();
 
         ArrayList<Double> list = new ArrayList<>();
-        list.add(AvgPostsPerUser);
-        list.add(AvgCommentsPerUser);
-        list.add(AvgCommentsToPost);
+        list.add(avgPostsPerUser);
+        list.add(avgCommentsPerUser);
+        list.add(avgCommentsToPost);
 
         //Then
         ArrayList<Double> expectedResult = new ArrayList<>();
@@ -159,14 +165,16 @@ public class ForumStatisticsTestSuite {
         ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
 
         //When
-        double AvgPostsPerUser = forumStatistics.getAvgPostPerUser();
-        double AvgCommentsPerUser = forumStatistics.getAvgCommentsPerUser();
-        double AvgCommentsToPost = forumStatistics.getAvgCommentsToPost();
+        forumStatistics.calculateAdvStatistics(statisticsMock);
+
+        double avgPostsPerUser = forumStatistics.getAvgPostPerUser();
+        double avgCommentsPerUser = forumStatistics.getAvgCommentsPerUser();
+        double avgCommentsToPost = forumStatistics.getAvgCommentsToPost();
 
         ArrayList<Double> list = new ArrayList<>();
-        list.add(AvgPostsPerUser);
-        list.add(AvgCommentsPerUser);
-        list.add(AvgCommentsToPost);
+        list.add(avgPostsPerUser);
+        list.add(avgCommentsPerUser);
+        list.add(avgCommentsToPost);
 
         //Then
         ArrayList<Double> expectedResult = new ArrayList<>();
@@ -196,14 +204,16 @@ public class ForumStatisticsTestSuite {
         ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
 
         //When
-        double AvgPostsPerUser = forumStatistics.getAvgPostPerUser();
-        double AvgCommentsPerUser = forumStatistics.getAvgCommentsPerUser();
-        double AvgCommentsToPost = forumStatistics.getAvgCommentsToPost();
+        forumStatistics.calculateAdvStatistics(statisticsMock);
+
+        double avgPostsPerUser = forumStatistics.getAvgPostPerUser();
+        double avgCommentsPerUser = forumStatistics.getAvgCommentsPerUser();
+        double avgCommentsToPost = forumStatistics.getAvgCommentsToPost();
 
         ArrayList<Double> list = new ArrayList<>();
-        list.add(AvgPostsPerUser);
-        list.add(AvgCommentsPerUser);
-        list.add(AvgCommentsToPost);
+        list.add(avgPostsPerUser);
+        list.add(avgCommentsPerUser);
+        list.add(avgCommentsToPost);
 
         //Then
         ArrayList<Double> expectedResult = new ArrayList<>();
@@ -230,14 +240,16 @@ public class ForumStatisticsTestSuite {
         ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
 
         //When
-        double AvgPostsPerUser = forumStatistics.getAvgPostPerUser();
-        double AvgCommentsPerUser = forumStatistics.getAvgCommentsPerUser();
-        double AvgCommentsToPost = forumStatistics.getAvgCommentsToPost();
+        forumStatistics.calculateAdvStatistics(statisticsMock);
+
+        double avgPostsPerUser = forumStatistics.getAvgPostPerUser();
+        double avgCommentsPerUser = forumStatistics.getAvgCommentsPerUser();
+        double avgCommentsToPost = forumStatistics.getAvgCommentsToPost();
 
         ArrayList<Double> list = new ArrayList<>();
-        list.add(AvgPostsPerUser);
-        list.add(AvgCommentsPerUser);
-        list.add(AvgCommentsToPost);
+        list.add(avgPostsPerUser);
+        list.add(avgCommentsPerUser);
+        list.add(avgCommentsToPost);
 
         //Then
         ArrayList<Double> expectedResult = new ArrayList<>();
@@ -267,14 +279,16 @@ public class ForumStatisticsTestSuite {
         ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
 
         //When
-        double AvgPostsPerUser = forumStatistics.getAvgPostPerUser();
-        double AvgCommentsPerUser = forumStatistics.getAvgCommentsPerUser();
-        double AvgCommentsToPost = forumStatistics.getAvgCommentsToPost();
+        forumStatistics.calculateAdvStatistics(statisticsMock);
+
+        double avgPostsPerUser = forumStatistics.getAvgPostPerUser();
+        double avgCommentsPerUser = forumStatistics.getAvgCommentsPerUser();
+        double avgCommentsToPost = forumStatistics.getAvgCommentsToPost();
 
         ArrayList<Double> list = new ArrayList<>();
-        list.add(AvgPostsPerUser);
-        list.add(AvgCommentsPerUser);
-        list.add(AvgCommentsToPost);
+        list.add(avgPostsPerUser);
+        list.add(avgCommentsPerUser);
+        list.add(avgCommentsToPost);
 
         //Then
         ArrayList<Double> expectedResult = new ArrayList<>();
