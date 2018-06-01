@@ -9,10 +9,6 @@ public class ForumStatistics {
     private double avgCommentsPerUser;
     private double avgCommentsToPost;
 
-    public ForumStatistics(Statistics statistics) {
-        this.statistics = statistics;
-    }
-
     public int getUsersQuantity() {
         return usersQuantity;
     }

@@ -45,7 +45,7 @@ public class ForumStatisticsTestSuite {
         when(statisticsMock.postsCount()).thenReturn(postsQuantity);
         when(statisticsMock.commentsCount()).thenReturn(commentsQuantity);
 
-        ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
+        ForumStatistics forumStatistics = new ForumStatistics();
 
         //When
         forumStatistics.calculateAdvStatistics(statisticsMock);
@@ -84,7 +84,7 @@ public class ForumStatisticsTestSuite {
         when(statisticsMock.postsCount()).thenReturn(postsQuantity);
         when(statisticsMock.commentsCount()).thenReturn(commentsQuantity);
 
-        ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
+        ForumStatistics forumStatistics = new ForumStatistics();
 
         //When
         forumStatistics.calculateAdvStatistics(statisticsMock);
@@ -123,7 +123,7 @@ public class ForumStatisticsTestSuite {
         when(statisticsMock.postsCount()).thenReturn(postsQuantity);
         when(statisticsMock.commentsCount()).thenReturn(commentsQuantity);
 
-        ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
+        ForumStatistics forumStatistics = new ForumStatistics();
 
         //When
         forumStatistics.calculateAdvStatistics(statisticsMock);
@@ -162,7 +162,7 @@ public class ForumStatisticsTestSuite {
         when(statisticsMock.postsCount()).thenReturn(postsQuantity);
         when(statisticsMock.commentsCount()).thenReturn(commentsQuantity);
 
-        ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
+        ForumStatistics forumStatistics = new ForumStatistics();
 
         //When
         forumStatistics.calculateAdvStatistics(statisticsMock);
@@ -201,7 +201,7 @@ public class ForumStatisticsTestSuite {
         when(statisticsMock.postsCount()).thenReturn(postsQuantity);
         when(statisticsMock.commentsCount()).thenReturn(commentsQuantity);
 
-        ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
+        ForumStatistics forumStatistics = new ForumStatistics();
 
         //When
         forumStatistics.calculateAdvStatistics(statisticsMock);
@@ -237,7 +237,7 @@ public class ForumStatisticsTestSuite {
         when(statisticsMock.postsCount()).thenReturn(postsQuantity);
         when(statisticsMock.commentsCount()).thenReturn(commentsQuantity);
 
-        ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
+        ForumStatistics forumStatistics = new ForumStatistics();
 
         //When
         forumStatistics.calculateAdvStatistics(statisticsMock);
@@ -276,7 +276,7 @@ public class ForumStatisticsTestSuite {
         when(statisticsMock.postsCount()).thenReturn(postsQuantity);
         when(statisticsMock.commentsCount()).thenReturn(commentsQuantity);
 
-        ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
+        ForumStatistics forumStatistics = new ForumStatistics();
 
         //When
         forumStatistics.calculateAdvStatistics(statisticsMock);
