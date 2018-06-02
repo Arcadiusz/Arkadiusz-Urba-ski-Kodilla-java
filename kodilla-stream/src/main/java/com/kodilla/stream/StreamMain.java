@@ -35,12 +35,12 @@ public class StreamMain {
         char firstChar = text.charAt(0);
         char lastChar = text.charAt(text.length()-1);
 
-        poemBeautifier.beautify("Sample text to decorate", (String) -> "ABC " + String + " ABC");
-        poemBeautifier.beautify("Another thing to beautify", (String) -> String.toUpperCase());
-        poemBeautifier.beautify("Yet another text that will be beautiful", (String) -> firstChar + String + lastChar  );
-        poemBeautifier.beautify("Good morning everybody", (String) -> String.replace('o',  'O')  );
-        poemBeautifier.beautify("Kodilla is perfect", (String) -> String.replaceAll("\\p{Space}", "|||" ));
-        poemBeautifier.beautify("Kodilla is perfect", (String) -> String.replaceAll("\\s+",""));
+        poemBeautifier.beautify("Sample text to decorate", (string) -> "ABC " + string + " ABC");
+        poemBeautifier.beautify("Another thing to beautify", (string) -> string.toUpperCase());
+        poemBeautifier.beautify(text, (string) -> firstChar + string + lastChar  );
+        poemBeautifier.beautify("Good morning everybody", (string) -> string.replace('o',  'O')  );
+        poemBeautifier.beautify("Kodilla is perfect", (string) -> string.replaceAll("\\p{Space}", "|||" ));
+        poemBeautifier.beautify("Kodilla is perfect", (string) -> string.replaceAll("\\s+",""));
     }
 
 
