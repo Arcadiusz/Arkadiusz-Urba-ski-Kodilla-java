@@ -121,7 +121,7 @@ public class StreamMain {
 
         System.out.println("# elements: " + theResultMapOfForumUsers.size());
         theResultMapOfForumUsers.entrySet().stream()
-                .map(entry -> entry.getKey() + " " + entry.getValue())  // O TO SPYTAC
+                .map(entry -> entry.getKey() + " " + entry.getValue())
                 .forEach(System.out::println);
 
 
