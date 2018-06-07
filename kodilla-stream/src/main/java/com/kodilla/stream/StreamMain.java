@@ -9,6 +9,8 @@ import com.kodilla.stream.lambda.*;
 import com.kodilla.stream.person.People;
 import com.kodilla.stream.reference.FunctionalCalculator;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -112,10 +114,9 @@ public class StreamMain {
         // Zadanie 7.3 funkcyjny spacer po liscie uzytkowników forum -----------------------------------------
 
         Forum forum = new Forum();
-
         Map<Integer, ForumUser> theResultMapOfForumUsers = forum.getUserList().stream()
                 .filter(user -> user.getSex() == 'M')
-                .filter(user -> user.getDateOfBirth().getDayOfYear() < 1998)
+                .filter(user -> Period.between(user.getDateOfBirth(), LocalDate.now()).getYears() >=20)
                 .filter(user -> user.getPostsQuantity() > 0)
                 .collect(Collectors.toMap(ForumUser::getUserID, user -> user));
 
