@@ -47,7 +47,7 @@ public class WorldTestSuite {
         BigInteger actualPeopleQuantity = world.getPeopleQuantity();
 
         //Then
-        Assert.assertEquals(actualPeopleQuantity, new BigInteger("6700000000"));
+        Assert.assertEquals(new BigInteger("6700000000"),actualPeopleQuantity );
         System.out.println("Actual number of people: " + actualPeopleQuantity);
         System.out.println("Expected number of people: " + new BigInteger("6700000000"));
 
