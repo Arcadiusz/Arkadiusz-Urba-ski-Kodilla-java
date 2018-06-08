@@ -1,10 +1,11 @@
 package com.kodilla.stream.array;
 
+
 import org.junit.Assert;
 import org.junit.Test;
+import static com.kodilla.stream.array.ArrayOperations.getAverage;
 
-import java.util.Arrays;
-import java.util.stream.IntStream;
+
 
 public class ArrayOperationsTestSuite {
 
@@ -25,15 +26,12 @@ public class ArrayOperationsTestSuite {
         array[9] = 9;
 
         //When
-        ArrayOperations.getAverage(array);
+        double result = getAverage(array);
 
         //Then
-        int sum = IntStream.range(0,array.length)
-        .map(n -> array[n])
-        .sum();
-        Assert.assertEquals(61, sum);
-        System.out.println("expected value = " + 61 );
-        System.out.println( "actual value = " + sum);
+        Assert.assertEquals(6.1,result,0);
+        System.out.println("expected averge = " + 6.1);
+        System.out.println("actul average = " + result);
 
     }
 }
