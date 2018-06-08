@@ -159,16 +159,17 @@ public class BoardTestSuite {
                 .flatMap(t -> t.getTasks().stream())
                 .count();
 
-        System.out.println(numberOftasksInProgress);
-
         double numberOfDays = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(t1 -> t1.getTasks().stream())
-                .mapToLong(t2 -> LocalDate.now().getDayOfYear() - t2.getCreated().getDayOfYear())
+                .mapToDouble(t2 -> LocalDate.now().getDayOfYear() - t2.getCreated().getDayOfYear())
                 .sum();
 
         //Then
         Assert.assertEquals(10,numberOfDays/numberOftasksInProgress,0.01);
+        System.out.println("number of tasks in progress: " + numberOftasksInProgress);
+        System.out.println("number of Days these task are beeing processed: " + numberOfDays);
+        System.out.println("Average days per task: " + numberOfDays/numberOftasksInProgress );
 
     }
 
