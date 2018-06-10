@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
@@ -162,14 +163,43 @@ public class BoardTestSuite {
         double numberOfDays = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(t1 -> t1.getTasks().stream())
-                .mapToDouble(t2 -> LocalDate.now().getDayOfYear() - t2.getCreated().getDayOfYear())
+                .mapToDouble(t2 -> ChronoUnit.DAYS.between(t2.getCreated(),LocalDate.now()))
                 .sum();
 
+        double average = numberOfDays/numberOftasksInProgress;
+
         //Then
-        Assert.assertEquals(10,numberOfDays/numberOftasksInProgress,0.01);
+        Assert.assertEquals(10,numberOfDays/numberOftasksInProgress,0.00001);
         System.out.println("number of tasks in progress: " + numberOftasksInProgress);
         System.out.println("number of Days these task are beeing processed: " + numberOfDays);
         System.out.println("Average days per task: " + numberOfDays/numberOftasksInProgress );
+
+    }
+
+    @Test
+    public void testAddTaskTasksMoreThan30Days(){
+        //Given
+        Board project = prepareTestData();
+
+        //When
+        List<TaskList> inProgressTasks = new ArrayList<>();
+        inProgressTasks.add(new TaskList("In progress"));
+        inProgressTasks.add(new TaskList("Done"));
+
+        List<String> moreThan30Days = project.getTaskLists().stream()
+                .filter(inProgressTasks::contains)
+                .flatMap(t -> t.getTasks().stream())
+                .filter(t -> ChronoUnit.DAYS.between(t.getCreated(), LocalDate.now())>11)
+                .map(Task::getTitle)
+                .collect(toList());
+
+        System.out.println(moreThan30Days);
+
+        //Then
+        List<String> result = new ArrayList<>();
+        result.add("HQLs for analysis");
+        result.add("Use Streams");
+        Assert.assertEquals(result,moreThan30Days);
 
     }
 
