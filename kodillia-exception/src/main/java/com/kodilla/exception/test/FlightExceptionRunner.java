@@ -9,10 +9,9 @@ public class FlightExceptionRunner {
     try {
         flightFinder.findFlight(flight1);
         System.out.println("This Flight is available");
-    }catch (RouteNotFoundException e){
+    }catch (Exception e){
         System.out.println("Flight not available");
     }
-
 
     }
 }
