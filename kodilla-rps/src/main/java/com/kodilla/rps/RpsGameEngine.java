@@ -6,17 +6,26 @@ import java.util.Scanner;
 
 public class RpsGameEngine {
 
-        int score = 0;
-        int compScore = 0;
-        int round = 1;
-        int winRounds;
-        String name;
+        private int score = 0;
+        private int compScore = 0;
+        private int round = 1;
+        private int winRounds;
+        private String name;
+        private int choice;
 
-        final int KAMIEN = 1;
-        final int PAPIER = 2;
-        final int NOZYCE = 3;
+        private final int KAMIEN = 1;
+        private final int PAPIER = 2;
+        private final int NOZYCE = 3;
+
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
+
+
+        ArrayList<String> lista = new ArrayList<>();{
+        lista.add("Kamien");
+        lista.add("Papier");
+        lista.add("Nozyce");
+        }
 
         public void preGameInfo(){
             System.out.println("this is the basic information how to operate the game");
@@ -73,8 +82,6 @@ public class RpsGameEngine {
             }
         }
 
-
-        int choice;
         public int giveANumber() {
             choice = scanner.nextInt();
             if ( choice < lista.size() + 1 && choice > 0){
@@ -84,12 +91,6 @@ public class RpsGameEngine {
                 giveANumber();
             }
             return choice;
-        }
-
-        ArrayList<String> lista = new ArrayList<>();{
-            lista.add("Kamien");
-            lista.add("Papier");
-            lista.add("Nozyce");
         }
 
         public void winsNumber(){
