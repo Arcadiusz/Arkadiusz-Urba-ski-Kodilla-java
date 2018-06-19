@@ -12,6 +12,7 @@ public class RpsGameEngine {
         private int winRounds;
         private String name;
         private int choice;
+        private int computerChoice;
 
         private final int KAMIEN = 1;
         private final int PAPIER = 2;
@@ -104,7 +105,7 @@ public class RpsGameEngine {
 
             while ( !end) {
 
-                int computerChoice = random.nextInt(3) + 1;
+                computerChoice = random.nextInt(3) + 1;
 
 
                 System.out.println();
@@ -117,7 +118,7 @@ public class RpsGameEngine {
                 System.out.print("Computer picked " + lista.get(computerChoice - 1) + " | ");
 
 
-                if (computerChoice == 1  && choice == 1 ){
+                if (computerChoice == KAMIEN  && choice == KAMIEN ){
                     System.out.println("Draw");
                 }
 
