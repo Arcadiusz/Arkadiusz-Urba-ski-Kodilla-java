@@ -8,9 +8,7 @@ public class OrderRequestRetriever {
 
         User user = new User("John", "Smith");
         LocalDateTime dateOfOrder = LocalDateTime.of(2018,6,10,15,12);
-
-        OrderRequest orderRequest = new OrderRequest(user,dateOfOrder,1234567);
-        int itemID = orderRequest.getItemID();
+        int itemID = 1234567;
 
         return new OrderRequest(user,dateOfOrder,itemID );
     }
