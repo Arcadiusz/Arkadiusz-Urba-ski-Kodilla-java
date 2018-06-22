@@ -2,8 +2,8 @@ package com.kodillla.good.patterns.challenges.food2Door;
 
 public class Product {
 
-    String productName;
-    double productPrice;
+    private String productName;
+    private double productPrice;
 
     public Product(String productName, double productPrice) {
         this.productName = productName;
