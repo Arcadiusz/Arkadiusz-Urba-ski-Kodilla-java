@@ -17,13 +17,13 @@ public class GlutenFreeShop implements Shop {
 
     }
 
+    @Override
     public boolean process(OrderRequest orderRequest){
-        if(orderRequest.getProduct().getProductName().equals("Potatoes")){
-            System.out.println("Welcome to " + shopName);
-            System.out.println("Currently" + orderRequest.getProduct().getProductName() + " out of stock");
-            return false;
-        }else{
+        System.out.println("Welcome to " + shopName);
+        if (productsMap.containsKey(orderRequest.getProduct().getProductName())) {
             return true;
+        }else{
+            return false;
         }
 
     }

@@ -14,12 +14,17 @@ public class ExtraFoodShop implements Shop {
         productsMap.put("Potatoes", 3.49);
         productsMap.put("Tomatoes", 5.49);
         productsMap.put("Carrots", 4.90);
-
     }
 
+    @Override
     public boolean process(OrderRequest orderRequest){
         System.out.println("Welcome to " + shopName);
-        System.out.println("Only today 10% discount on all productsMap");
-        return true;
+        System.out.println("Only today 10% discount on all products");
+        if (productsMap.containsKey(orderRequest.getProduct().getProductName())) {
+            return true;
+        }else{
+            return false;
+        }
+
     }
 }

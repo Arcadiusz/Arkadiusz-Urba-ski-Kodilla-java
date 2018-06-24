@@ -7,11 +7,17 @@ public class Main {
         OrderRequestRetriever requestRetriever = new OrderRequestRetriever();
         OrderRequest orderRequest = requestRetriever.retrieve();
 
-        OrderService orderService = new OrderService();
+      /*  OrderService orderService = new OrderService();
         orderService.createOrder(new ExtraFoodShop(), orderRequest);
         System.out.println();
         orderService.createOrder(new GlutenFreeShop(),orderRequest);
         System.out.println();
-        orderService.createOrder(new HealthyShop(),orderRequest);
+        orderService.createOrder(new HealthyShop(),orderRequest);*/
+
+        OrderService orderService = new OrderService();
+
+        orderService.createOrder(orderRequest);
+
+
     }
 }

@@ -15,7 +15,7 @@ public class FlightMain {
         finderService.flightsTo("Sydney");
 
         System.out.println();
-
+        finderService.flightszThrough("Warsaw", "Kraków");
 
     }
 }

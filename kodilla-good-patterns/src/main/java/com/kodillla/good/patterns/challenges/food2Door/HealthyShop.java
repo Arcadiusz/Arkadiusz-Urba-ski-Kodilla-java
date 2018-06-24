@@ -7,18 +7,26 @@ public class HealthyShop implements Shop {
 
     private final String shopName = "HealthyShop";
 
-    Map<String, Double> productsMap = new HashMap<>();
+    private static Map<String, Double> productsMap = new HashMap<>();
 
-
-    public HealthyShop() {
-        this.productsMap.put("Lettuce", 4.00);
-        this.productsMap.put("Broccoli", 6.50);
-        this.productsMap.put("Spinach", 10.90);;
+    static {
+        productsMap.put("Lettuce", 4.00);
+        productsMap.put("Broccoli", 6.50);
+        productsMap.put("Spinach", 10.90);;
     }
 
+    public HealthyShop() {
+    }
+
+    @Override
     public boolean process( OrderRequest orderRequest){
         System.out.println("Welcome to " + shopName);
-        return true;
+
+        if (productsMap.containsKey(orderRequest.getProduct().getProductName())) {
+            return true;
+        }else {
+            return false;
+        }
     }
 
 }
