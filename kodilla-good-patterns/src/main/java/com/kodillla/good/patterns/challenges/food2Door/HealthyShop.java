@@ -22,7 +22,7 @@ public class HealthyShop implements Shop {
     public boolean process( OrderRequest orderRequest){
         System.out.println("Welcome to " + shopName);
 
-        if (productsMap.containsKey(orderRequest.getProduct().getProductName())) {
+        if (productsMap.containsKey(orderRequest.getProduct().getProductName()) && orderRequest.getQuantityInKilos()<productsMap.get(orderRequest.getProduct().getProductName())) {
             return true;
         }else {
             return false;

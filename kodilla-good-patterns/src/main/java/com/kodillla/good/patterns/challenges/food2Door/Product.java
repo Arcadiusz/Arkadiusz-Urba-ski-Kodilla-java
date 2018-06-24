@@ -18,9 +18,6 @@ public class Product {
         return productPrice;
     }
 
-    public void setProductPrice(double productPrice) {
-        this.productPrice = productPrice;
-    }
 
     @Override
     public String toString() {

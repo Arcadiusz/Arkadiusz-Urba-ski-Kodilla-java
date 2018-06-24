@@ -20,7 +20,7 @@ public class ExtraFoodShop implements Shop {
     public boolean process(OrderRequest orderRequest){
         System.out.println("Welcome to " + shopName);
         System.out.println("Only today 10% discount on all products");
-        if (productsMap.containsKey(orderRequest.getProduct().getProductName())) {
+        if (productsMap.containsKey(orderRequest.getProduct().getProductName()) && orderRequest.getQuantityInKilos()<productsMap.get(orderRequest.getProduct().getProductName())) {
             return true;
         }else{
             return false;

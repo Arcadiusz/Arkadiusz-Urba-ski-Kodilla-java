@@ -20,9 +20,10 @@ public class GlutenFreeShop implements Shop {
     @Override
     public boolean process(OrderRequest orderRequest){
         System.out.println("Welcome to " + shopName);
-        if (productsMap.containsKey(orderRequest.getProduct().getProductName())) {
+        if (productsMap.containsKey(orderRequest.getProduct().getProductName()) && orderRequest.getQuantityInKilos()<productsMap.get(orderRequest.getProduct().getProductName())) {
             return true;
         }else{
+            System.out.println("Not enough product");
             return false;
         }
 
