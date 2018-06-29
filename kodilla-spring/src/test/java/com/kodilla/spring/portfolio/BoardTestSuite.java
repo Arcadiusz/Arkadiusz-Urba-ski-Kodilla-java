@@ -5,6 +5,8 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.List;
+
 public class BoardTestSuite {
 
     @Test
@@ -18,9 +20,10 @@ public class BoardTestSuite {
         board.addTaskInProgressList("Task 2");
         board.addTaskDoneList("Task 3");
 
-        String task1 = board.getToDoList().tasks.toString();
-        String task2 = board.getInProgressList().tasks.toString();
-        String task3 = board.getDoneList().tasks.toString();
+
+        String task1 = board.getToDoList().getTask();
+        String task2 = board.getInProgressList().getTask();
+        String task3 = board.getDoneList().getTask();
 
         //Then
         Assert.assertEquals("[Task 1]", task1);
