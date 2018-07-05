@@ -27,12 +27,11 @@ public class PaintingTask implements Task {
     @Override
     public boolean isTaskExecuted() {
         boolean isWhatToPaintFullyPainted = true;
-        boolean executed;
         if (isWhatToPaintFullyPainted) {
-            executed = true;
-            return executed;
+            isExecuteStarted = true;
+            return isExecuteStarted;
         }else
-            executed = false;
-            return executed;
+            isExecuteStarted = false;
+            return isExecuteStarted;
     }
 }

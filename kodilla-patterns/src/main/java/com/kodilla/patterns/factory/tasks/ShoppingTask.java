@@ -26,12 +26,11 @@ public class ShoppingTask implements Task{
 
     @Override
     public boolean isTaskExecuted() {
-        boolean executed;
         if(quantity > 2) {
-            executed = true;
-            return executed;
+            isExecuteStarted = true;
+            return isExecuteStarted;
         }else
-            executed = false;
-            return executed;
+            isExecuteStarted = false;
+            return isExecuteStarted;
     }
 }

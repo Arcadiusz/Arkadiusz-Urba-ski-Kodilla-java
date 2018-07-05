@@ -26,13 +26,12 @@ public class DrivingTask implements Task {
 
     @Override
     public boolean isTaskExecuted() {
-        boolean executed;
         String gpsCurrentLocation = "Atlanta";
         if(gpsCurrentLocation == where) {
-            executed = true;
-            return executed;
+            isExecuteStarted = true;
+            return isExecuteStarted;
         }else
-            executed = false;
-            return executed;
+            isExecuteStarted = false;
+            return isExecuteStarted;
     }
 }
