@@ -2,9 +2,10 @@ package com.kodilla.patterns.factory.tasks;
 
 public class DrivingTask implements Task {
 
-    String taskName;
-    String where;
-    String using;
+    private String taskName;
+    private String where;
+    private String using;
+    private boolean isExecuteStarted = false;
 
     public DrivingTask(String taskName, String where, String using) {
         this.taskName = taskName;
@@ -15,6 +16,7 @@ public class DrivingTask implements Task {
     @Override
     public void executeTask() {
         System.out.println("the journey starting using " + using + " to " + where);
+        isExecuteStarted = true;
     }
 
     @Override
@@ -24,10 +26,13 @@ public class DrivingTask implements Task {
 
     @Override
     public boolean isTaskExecuted() {
+        boolean executed;
         String gpsCurrentLocation = "Atlanta";
         if(gpsCurrentLocation == where) {
-            return true;
+            executed = true;
+            return executed;
         }else
-            return false;
+            executed = false;
+            return executed;
     }
 }
