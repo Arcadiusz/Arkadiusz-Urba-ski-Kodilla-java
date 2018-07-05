@@ -1,10 +1,5 @@
 package com.kodilla.patterns.factory.tasks;
 
-import com.kodilla.patterns.factory.Circle;
-import com.kodilla.patterns.factory.Rectangle;
-import com.kodilla.patterns.factory.Shape;
-import com.kodilla.patterns.factory.Square;
-
 public class TaskFactory {
     public static final String DRIVING = "DRIVING";
     public static final String PAINTING = "PAINTING";
