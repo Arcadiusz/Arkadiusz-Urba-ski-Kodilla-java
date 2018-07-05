@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.stream.portfolio.BoardTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2018-07-05T15:52:25" hostname="LAPTOP-PG4L8KD3" time="0.057">
+  <properties/>
+  <testcase name="testAddTaskList" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.041"/>
+  <testcase name="testAddTaskListAverageWorkingOnTask" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.008"/>
+  <testcase name="testAddTaskListFindUsersTasks" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.002"/>
+  <testcase name="testAddTaskListFindLongTasks" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.001"/>
+  <testcase name="testAddTaskListFindOutdatedTasks" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.001"/>
+  <testcase name="testAddTaskTasksMoreThan30Days" classname="com.kodilla.stream.portfolio.BoardTestSuite" time="0.002"/>
+  <system-out><![CDATA[number of tasks in progress: 3
+number of Days these task are beeing processed: 30.0
+Average days per task: 10.0
+20
+[HQLs for analysis, Use Streams]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,19 @@
+2
+3
+1
+5
+13
+11
+2
+7
+8
+9
+expected averge = 6.1
+actul average = 6.1
+ number of tasks in progress: 3
+6number of Days these task are beeing processed: 30.0
+Average days per task: 10.0
+20
+"[HQLs for analysis, Use Streams]
+%Actual number of people: 6700000000
+'Expected number of people: 6700000000

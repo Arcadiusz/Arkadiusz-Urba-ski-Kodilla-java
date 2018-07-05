@@ -5,7 +5,7 @@ public class DrivingTask implements Task {
     private String taskName;
     private String where;
     private String using;
-    private boolean isExecuteStarted = false;
+    private boolean executed;
 
     public DrivingTask(String taskName, String where, String using) {
         this.taskName = taskName;
@@ -16,7 +16,7 @@ public class DrivingTask implements Task {
     @Override
     public void executeTask() {
         System.out.println("the journey starting using " + using + " to " + where);
-        isExecuteStarted = true;
+        executed = true;
     }
 
     @Override
@@ -24,14 +24,9 @@ public class DrivingTask implements Task {
         return taskName;
     }
 
+
     @Override
     public boolean isTaskExecuted() {
-        String gpsCurrentLocation = "Atlanta";
-        if(gpsCurrentLocation == where) {
-            isExecuteStarted = true;
-            return isExecuteStarted;
-        }else
-            isExecuteStarted = false;
-            return isExecuteStarted;
+        return executed;
     }
 }
