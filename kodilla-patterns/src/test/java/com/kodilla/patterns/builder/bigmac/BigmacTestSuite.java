@@ -10,7 +10,7 @@ public class BigmacTestSuite {
     public void testBigmac() {
         //Given
         Bigmac bigmac = new Bigmac.BigmacBuilder()
-                .bun("bun")
+                .bun("sezam bun")
                 .burgers(2)
                 .sauce("1000 islands")
                 .ingredient("salad")
@@ -27,7 +27,7 @@ public class BigmacTestSuite {
 
         //Then
         Assert.assertEquals(4, howManyIngredients,0);
-        Assert.assertEquals("bun", isBun );
+        Assert.assertEquals("sezam bun", isBun );
         Assert.assertEquals("1000 islands", wchichSauce);
         Assert.assertEquals(2, howManyBurgers,0);
     }
