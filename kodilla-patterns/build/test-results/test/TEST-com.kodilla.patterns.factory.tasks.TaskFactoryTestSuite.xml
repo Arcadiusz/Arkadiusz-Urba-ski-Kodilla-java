@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-07-05T15:52:19" hostname="LAPTOP-PG4L8KD3" time="0.003">
+<testsuite name="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-07-17T14:03:12" hostname="LAPTOP-PG4L8KD3" time="0.004">
   <properties/>
-  <testcase name="testFactoryPainting" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" time="0.001"/>
-  <testcase name="testFactoryDriving" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" time="0.0"/>
-  <testcase name="testFactoryShopping" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="testFactoryPainting" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" time="0.002"/>
+  <testcase name="testFactoryDriving" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" time="0.001"/>
+  <testcase name="testFactoryShopping" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" time="0.001"/>
+  <system-out><![CDATA[Starting to execute Refreshing painting. Thing to paint : ceiling wanted color is White
+the journey starting using Truck to Atlanta
+the Clothes Shopping is beeing processed
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

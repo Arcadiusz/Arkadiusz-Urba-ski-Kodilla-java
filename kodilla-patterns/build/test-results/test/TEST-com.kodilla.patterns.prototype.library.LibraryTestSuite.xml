@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-07-05T15:52:19" hostname="LAPTOP-PG4L8KD3" time="0.004">
+<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-07-17T14:03:12" hostname="LAPTOP-PG4L8KD3" time="0.003">
   <properties/>
-  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.004"/>
+  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.003"/>
   <system-out><![CDATA[Library | My Library | 
- books=[Book{title='Moon is Big', author='Mark Newman', publicationDate=2008-08-24}, Book{title='Moonrise', author='Kate Newman', publicationDate=2000-10-11}, Book{title='Moon or Dawn', author='Henrik Newman', publicationDate=2010-04-10}, Book{title='Moon and Sun', author='Jessica Newman', publicationDate=2001-03-03}, Book{title='Moon', author='John Newman', publicationDate=1999-12-12}]}
+ books=[Book{title='Moon and Sun', author='Jessica Newman', publicationDate=2001-03-03}, Book{title='Moon is Big', author='Mark Newman', publicationDate=2008-08-24}, Book{title='Moon or Dawn', author='Henrik Newman', publicationDate=2010-04-10}, Book{title='Moon', author='John Newman', publicationDate=1999-12-12}, Book{title='Moonrise', author='Kate Newman', publicationDate=2000-10-11}]}
+
+Library | My Cloned Library | 
+ books=[Book{title='Moon and Sun', author='Jessica Newman', publicationDate=2001-03-03}, Book{title='Moon is Big', author='Mark Newman', publicationDate=2008-08-24}, Book{title='Moon or Dawn', author='Henrik Newman', publicationDate=2010-04-10}, Book{title='Moon', author='John Newman', publicationDate=1999-12-12}, Book{title='Moonrise', author='Kate Newman', publicationDate=2000-10-11}]}
 
 Library | My deeply cloned Library | 
- books=[Book{title='Moon is Big', author='Mark Newman', publicationDate=2008-08-24}, Book{title='Moonrise', author='Kate Newman', publicationDate=2000-10-11}, Book{title='Moon or Dawn', author='Henrik Newman', publicationDate=2010-04-10}, Book{title='Moon and Sun', author='Jessica Newman', publicationDate=2001-03-03}, Book{title='Moon', author='John Newman', publicationDate=1999-12-12}]}
-
-Library | My Library | 
- books=[Book{title='Moon or Dawn', author='Henrik Newman', publicationDate=2010-04-10}, Book{title='Moonrise', author='Kate Newman', publicationDate=2000-10-11}, Book{title='Moon is Big', author='Mark Newman', publicationDate=2008-08-24}, Book{title='Moon and Sun', author='Jessica Newman', publicationDate=2001-03-03}, Book{title='Moon', author='John Newman', publicationDate=1999-12-12}]}
+ books=[Book{title='Moon is Big', author='Mark Newman', publicationDate=2008-08-24}, Book{title='Moon or Dawn', author='Henrik Newman', publicationDate=2010-04-10}, Book{title='Moon and Sun', author='Jessica Newman', publicationDate=2001-03-03}, Book{title='Moonrise', author='Kate Newman', publicationDate=2000-10-11}, Book{title='Moon', author='John Newman', publicationDate=1999-12-12}]}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
