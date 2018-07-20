@@ -102,7 +102,7 @@ public class CompanyDaoTestSuite {
         companyDao.save(LightGraphics);
         int lightId = MicroWeb.getId();
         companyDao.save(NewSolutions);
-        int NewId = MicroWeb.getId();
+        int newId = MicroWeb.getId();
 
         //When
         List<Company> resultCompanyNames = companyDao.retrieveWithThreeLetters("Mic");
@@ -114,9 +114,9 @@ public class CompanyDaoTestSuite {
 
         //CleanUp
         try {
-            companyDao.delete(MicroWeb);
-            companyDao.delete(LightGraphics);
-            companyDao.delete(NewSolutions);
+            companyDao.delete(microId);
+            companyDao.delete(lightId);
+            companyDao.delete(newId);
         } catch (Exception e) {
             //do nothing
         }
