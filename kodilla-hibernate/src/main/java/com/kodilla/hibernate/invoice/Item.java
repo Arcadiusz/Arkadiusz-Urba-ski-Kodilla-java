@@ -12,7 +12,7 @@ public class Item {
     private Product product;
     private BigDecimal price;
     private int quantity;
-    BigDecimal value;
+    private BigDecimal value;
     private Invoice invoice;
 
     public Item(){
