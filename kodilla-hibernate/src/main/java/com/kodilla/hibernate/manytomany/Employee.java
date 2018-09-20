@@ -5,10 +5,17 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedQuery(
-        name = "Employee.retrieveEmployeesWithLastname",
-        query = "FROM Employee WHERE lastname == :LASTNAME"
-)
+
+        @NamedQuery(
+                name = "Employee.retrieveEmployeesWithLastname",
+                query = "FROM Employee WHERE LASTNAME = :LASTNAME"
+        )
+
+        @NamedNativeQuery(
+                name = "Employee.findByAnyPartOfName",
+                query = "SELECT * FROM Employees WHERE lastname LIKE :ANYPARTOFNAME",
+                resultClass = Employee.class)
+
 
 @Entity
 @Table(name = "EMPLOYEES")
@@ -69,5 +76,14 @@ public class Employee {
 
     public void setCompanies(List<Company> companies) {
         this.companies = companies;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                '}';
     }
 }

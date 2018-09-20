@@ -5,12 +5,22 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedNativeQuery(
+@NamedNativeQueries({
+    @NamedNativeQuery(
         name="Company.retrieveWithThreeLetters",
         query="SELECT * FROM COMPANIES"+
                 " WHERE SUBSTRING(COMPANY_NAME, 1, 3) = :LETTERSMATCH",
         resultClass = Company.class
-)
+    ),
+        @NamedNativeQuery(
+                name = "Company.findNameOfCompanyByAnyPartOfName",
+                query = "SELECT * FROM companies WHERE company_name LIKE :ANYPARTOFNAMECOMPANY",
+                resultClass = Company.class)
+})
+
+
+
+
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
