@@ -17,11 +17,11 @@ public class EmployeeAndCompanyFacade {
     @Autowired
     EmployeeDao employeeDao;
 
-    public List<Company> findNameOfCompanyByAnyPartOfName(String searchingPartOfText) {
-        return companyDao.findNameOfCompanyByAnyPartOfName("%"+searchingPartOfText+"%");
+    public List<Company> findNameOfCompanyByAnyPartOfName(String name) {
+        return companyDao.findNameOfCompanyByAnyPartOfName(name);
     }
 
     public List<Employee> findNameOfEmployeeByAnyPartOfName(String name) {
-        return employeeDao.findByAnyPartOfName("%"+name+"%");
+        return employeeDao.findByAnyPartOfName(name);
     }
 }

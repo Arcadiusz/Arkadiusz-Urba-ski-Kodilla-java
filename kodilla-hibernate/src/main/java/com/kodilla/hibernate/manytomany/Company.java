@@ -14,7 +14,7 @@ import java.util.List;
     ),
         @NamedNativeQuery(
                 name = "Company.findNameOfCompanyByAnyPartOfName",
-                query = "SELECT * FROM companies WHERE company_name LIKE :ANYPARTOFNAMECOMPANY",
+                query = "SELECT * FROM companies WHERE company_name LIKE concat('%', :COMPANYNAME, '%')",
                 resultClass = Company.class)
 })
 
