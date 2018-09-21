@@ -27,7 +27,7 @@ public class Watcher {
             long begin = System.currentTimeMillis();
             result = proceedingJoinPoint.proceed();
             long end = System.currentTimeMillis();
-            LOGGER.info("Time consumed: " + (end - begin) + "[ms]")
+            LOGGER.info("Time consumed: " + (end - begin) + "[ms]");
         } catch (Throwable throwable) {
             LOGGER.error(throwable.getMessage());
             throw throwable;
