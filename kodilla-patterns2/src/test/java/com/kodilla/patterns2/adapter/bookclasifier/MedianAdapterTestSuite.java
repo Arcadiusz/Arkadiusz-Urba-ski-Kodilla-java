@@ -1,12 +1,10 @@
 package com.kodilla.patterns2.adapter.bookclasifier;
 
 import com.kodilla.patterns2.adapter.bookclasifier.librarya.Book;
-import com.kodilla.patterns2.adapter.bookclasifier.libraryb.BookSignature;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 public class MedianAdapterTestSuite {
