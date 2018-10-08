@@ -25,6 +25,7 @@ repositories {
 
 
 dependencies {
+<<<<<<< HEAD
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.14.0'
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
@@ -32,4 +33,8 @@ dependencies {
     //test dependencies
     testCompile 'junit:junit:4.12'
 
+=======
+    compile('org.springframework.boot:spring-boot-starter-web')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+>>>>>>> d94cc53... First Commit
 }

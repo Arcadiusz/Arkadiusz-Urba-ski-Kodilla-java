@@ -1,4 +1,5 @@
 rootProject.name = 'kodilla-course'
+<<<<<<< HEAD
 include 'kodilla-testing'
 include 'kodilla-stream'
 include 'kodillia-exception'
@@ -11,3 +12,5 @@ include 'kodilla-jdbc'
 include 'kodilla-testing2'
 include 'kodilla-testing2'
 
+=======
+>>>>>>> d94cc53... First Commit

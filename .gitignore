@@ -1,5 +1,9 @@
 .gradle
+<<<<<<< HEAD
 /build
+=======
+/build/
+>>>>>>> d94cc53... First Commit
 !gradle/wrapper/gradle-wrapper.jar
 
 ### STS ###
