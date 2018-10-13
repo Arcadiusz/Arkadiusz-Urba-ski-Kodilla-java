@@ -52,25 +52,26 @@ public class CrudAppTestSuite {
     }
 
     private void sendTestTaskToTrello(String taskName) throws InterruptedException {
-        driver.navigate().refresh();
+            driver.navigate().refresh();
 
-        while (!driver.findElement(By.xpath("//select[1]")).isDisplayed()) ;
+            while (!driver.findElement(By.xpath("//select[1]")).isDisplayed()) ;
 
-        driver.findElements(By.xpath("//form[@class=\"datatable__row\"]")).stream()
-                .filter(anyForm ->
-                        anyForm.findElement(By.xpath(".//p[@class=\"datatable__field-value\"]"))
-                                .getText().equals(taskName))
-                .forEach(theForm -> {
-                    WebElement selectElement = theForm.findElement(By.xpath(".//select[1]"));
-                    Select select = new Select(selectElement);
-                    select.selectByIndex(1);
+            driver.findElements(By.xpath("//form[@class=\"datatable__row\"]")).stream()
+                    .filter(anyForm ->
+                            anyForm.findElement(By.xpath(".//p[@class=\"datatable__field-value\"]"))
+                                    .getText().equals(taskName))
+                    .forEach(theForm -> {
+                        WebElement selectElement = theForm.findElement(By.xpath(".//select[1]"));
+                        Select select = new Select(selectElement);
+                        select.selectByIndex(1);
 
-                    WebElement createButton =
-                            theForm.findElement(By.xpath(".//button[contains(@class, \"card-creation\")]"));
-                    createButton.click();
-                });
+                        WebElement createButton =
+                                theForm.findElement(By.xpath(".//button[contains(@class, \"card-creation\")]"));
+                        createButton.click();
+                    });
 
-        Thread.sleep(5000);
+            Thread.sleep(5000);
+            driver.switchTo().alert().accept();
     }
 
     private boolean checkTaskExistsInTrello(String taskName) throws InterruptedException {
@@ -87,15 +88,30 @@ public class CrudAppTestSuite {
         Thread.sleep(2000);
 
         driverTrello.findElements(By.xpath("//a[@class=\"board-tile\"]")).stream()
-                .filter(aHref -> aHref.findElements(By.xpath(".//span[@title=\"Kodilla Application\"]")).size() > 0)
+                .filter(aHref -> aHref.findElements(By.xpath(".//div[@title=\"Kodilla Application\"]")).size() > 0)
                 .forEach(aHref -> aHref.click());
 
         Thread.sleep(2000);
 
-        result = driverTrello.findElements(By.xpath("//span")).stream()
-                .filter(theSpan -> theSpan.getText().contains(taskName))
-                .collect(Collectors.toList())
-                .size() > 0;
+        boolean breakIt = true;
+
+        while(true) {
+            breakIt = true;
+            try {
+                result = driverTrello.findElements(By.xpath("//span")).stream()
+                        .filter(theSpan -> theSpan.getText().contains(taskName))
+                        .collect(Collectors.toList())
+                        .size() > 0;
+            } catch(Exception e) {
+                if ( e.getMessage().contains("element is not attached")) {
+                    breakIt = false;
+                }
+            }
+
+            if (breakIt){
+                break;
+            }
+        }
 
         driverTrello.close();
 
@@ -117,7 +133,6 @@ public class CrudAppTestSuite {
 
         Thread.sleep(2000);
     }
-
 
     @Test
     public void shouldCreateTrelloCard() throws InterruptedException {
